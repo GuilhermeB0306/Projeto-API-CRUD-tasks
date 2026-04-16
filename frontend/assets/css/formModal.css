@@ -1,0 +1,56 @@
+#edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#edit-mode h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+#edit-mode label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+}
+
+#edit-mode input,
+#edit-mode textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#edit-mode input:focus,
+#edit-mode textarea:focus {
+  border-color: #3b82f6;
+}
+
+#edit-mode .modal-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#save-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#cancel-btn {
+  background: #e5e7eb;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}

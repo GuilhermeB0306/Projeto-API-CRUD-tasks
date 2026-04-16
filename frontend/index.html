@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quadro de Tarefas</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/modal.css">
+  <link rel="stylesheet" href="assets/css/formModal.css">
+  <script src="./assets/js/app.js" type="module" ></script>
+</head>
+<body>
+
+  <header>
+    <h1>Quadro de Tarefas</h1>
+  </header>
+
+  <main class="board">
+
+    <div class="column" id="todo">
+      <h2>Pendente</h2>
+      <div class="tasks"></div>
+      <button type="button" id="create-task">+</button>
+    </div>
+
+    <div class="column" id="doing">
+      <h2>Processando</h2>
+      <div class="tasks"></div>
+    </div>
+
+    <div class="column" id="done">
+      <h2>Pronto</h2>
+      <div class="tasks"></div>
+    </div>
+
+  </main>
+
+  <div id="modal" class="hidden">
+
+    <div class="modal-content" >
+
+     
+      <div id="view-mode">
+
+        <h2 id="modal-title"></h2>
+
+        <p class="label">Descrição</p>
+        <p id="modal-desc"></p>
+
+        <p class="label">Anotação</p>
+        <small id="modal-note"></small>
+
+        <p class="label">Data</p>
+        <p id="modal-date"></p>
+
+        <div class="modal-actions">
+          <button id="edit-btn">Editar</button>
+          <button id="delete-btn">Excluir</button>
+          <button id="close-btn">Fechar</button>
+        </div>
+
+      </div>
+
+    
+      <form id="edit-mode" class="hidden">
+
+        <h2>Editar Task</h2>
+
+        <label for="edit-title">Título</label>
+        <input type="text" id="edit-title" />
+
+        <label for="edit-desc">Descrição</label>
+        <textarea id="edit-desc"></textarea>
+
+        <label for="edit-note">Anotação</label>
+        <textarea id="edit-note"></textarea>
+
+        <div class="modal-actions">
+          <button type="submit" id="save-btn">Salvar</button>
+          <button type="button" id="cancel-btn">Cancelar</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  
+</body>
+</html>
