@@ -48,17 +48,6 @@ Este projeto ainda está em evolução. As próximas melhorias planejadas são:
 
 ---
 
-## ▶️ Como executar o projeto
-
-```bash
-# Instalar dependências
-npm install
-
-# Iniciar o servidor
-node server.js
-
----
-
 ## 📌 Observação
 
-Projeto em desenvolvimento contínuo com foco em aprendizado de desenvolvimento Full Stack, organização de código e integração entre frontend e backend.
+Projeto ainda em desenvolvimento.
