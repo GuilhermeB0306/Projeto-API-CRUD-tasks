@@ -57,6 +57,8 @@ npm install
 # Iniciar o servidor
 node server.js
 
+---
+
 ## 📌 Observação
 
 Projeto em desenvolvimento contínuo com foco em aprendizado de desenvolvimento Full Stack, organização de código e integração entre frontend e backend.
