@@ -20,6 +20,14 @@ export async function deleteTask(id){
         method: "DELETE"
     })
     if(!res.ok) throw new Error("Erro ao deletar task");
-    if (res.status === 204) return null;
     return res.json();
+}
+export async function createTask(data) {
+    const res = await fetch(`${BASE}/task`,{
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+    if (!res.ok) throw new Error("Erro ao criar task");
+    return res.json()
 }

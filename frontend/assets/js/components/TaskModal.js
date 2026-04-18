@@ -14,6 +14,7 @@ export default class TaskModal {
         this.closeBtn  = document.getElementById("close-btn");
         this.editBtn   = document.getElementById("edit-btn");
         this.deleteBtn = document.getElementById("delete-btn")
+        this.createBtn = document.getElementById("create-btn")
 
         this.task = null;
 
@@ -24,12 +25,15 @@ export default class TaskModal {
         EventBus.on("task:editCancel", () => this.showView())
 
         EventBus.on("task:saved", () => this.close());
+
+        EventBus.on("task:create", () => this.showForm())
     }
 
     bindEvents() {
         this.closeBtn.addEventListener("click",  () => this.close());
         this.editBtn.addEventListener("click",   () => this.showEdit());
         this.deleteBtn.addEventListener("click", () => this.handleDelete());
+        this.createBtn.addEventListener("click",() => this.showCreate());
     }
 
     open(task) {
@@ -52,11 +56,18 @@ export default class TaskModal {
         this.edit.style.display = "none";
     }
 
-    showEdit() {
+    showForm() {
         this.view.style.display = "none";
         this.edit.style.display = "block";
-       
+    }
+    showEdit() {
+        this.showForm();
         EventBus.emit("task:edit", this.task);
+    }
+    showCreate() {
+        this.showForm();
+        this.modal.classList.remove("hidden");
+        EventBus.emit("task:create", this.task)
     }
 
    async handleDelete(){
